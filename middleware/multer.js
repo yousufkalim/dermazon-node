@@ -9,6 +9,7 @@ exports.upload = multer({
   // to store images
   storage: multer.diskStorage({
     // Defining the path where we have to store the image
+
     destination: function (req, file, cb) {
       cb(null, './uploads'); // Callback
     },

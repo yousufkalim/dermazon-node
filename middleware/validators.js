@@ -49,6 +49,8 @@ exports.changePasswordValidate = [
   check('confirmPassword', 'Confirm password is required.').notEmpty().trim().isLength({ min: 8 }),
 ];
 
+exports.createProductValidate = [check('name', 'Product name is required').notEmpty().trim()];
+
 /*
 ======================
 Result
