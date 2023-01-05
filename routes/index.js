@@ -15,4 +15,5 @@ router.use('/products', require('./products'));
 router.use('/news', checkAuth, checkAdminAuth, require('./news'));
 
 // Export
+
 module.exports = router;
