@@ -11,7 +11,7 @@ const router = require('express').Router();
 router.use('/admins', require('./admins')); // All the user routes
 router.use('/users', require('./users')); // All the user routes
 router.use('/auth', require('./auth')); // All the auth routes
-router.use('/products', checkAuth, checkAdminAuth, require('./products'));
+router.use('/products', require('./products'));
 router.use('/news', checkAuth, checkAdminAuth, require('./news'));
 
 // Export
