@@ -61,7 +61,7 @@ exports.contactUs = (name, company, phone, email, request, message, attachment) 
     // Send email options
     var mailOptions = {
       from: sendEmail,
-      to: 'asfi.official@gmail.com',
+      to: 'zunairaali182@gmail.com',
       subject: 'contact us',
       html: `<div>
         <ul>
