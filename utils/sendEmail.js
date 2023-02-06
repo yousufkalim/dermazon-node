@@ -50,9 +50,9 @@ exports.contactUs = (name, company, phone, email, request, message, attachment) 
   return new Promise((resolve, reject) => {
     // Sender mail server config
     var transporter = nodemailer.createTransport({
-      port: 465,
-      secure: true,
-      service: 'Gmail',
+      port: 587,
+      secure: false,
+      host: 'pro1.mail.ovh.net',
       auth: {
         user: sendEmail,
         pass: senderPassword,
@@ -61,7 +61,7 @@ exports.contactUs = (name, company, phone, email, request, message, attachment) 
     // Send email options
     var mailOptions = {
       from: sendEmail,
-      to: 'zunairaali182@gmail.com',
+      to: sendEmail,
       subject: 'contact us',
       html: `<div>
         <ul>
