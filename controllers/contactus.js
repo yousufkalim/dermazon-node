@@ -9,7 +9,7 @@ exports.createContact = async (req, res) => {
     const newContact = new Contact(req.body);
 
     // Sending contact email
-    const attachment = `${process.env.BASE_URL}/${image}`;
+    const attachment = `${process.env.HOST}/${image}`;
     await contactUs(name, company, phone, email, request, message, attachment);
     await newContact.save();
 
