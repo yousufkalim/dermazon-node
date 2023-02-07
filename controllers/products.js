@@ -1,3 +1,4 @@
+const Comments = require('../models/Comments');
 const News = require('../models/News');
 const Products = require('../models/Products');
 
@@ -137,12 +138,14 @@ exports.getDocumentCounts = async (req, res) => {
   try {
     const productCounts = await Products.find().countDocuments();
     const newsCounts = await News.find().countDocuments();
+    const commentCounts = await Comments.find().countDocuments();
 
     res.status(200).json({
       success: true,
       data: {
         products: productCounts,
         news: newsCounts,
+        comments: commentCounts,
       },
     });
   } catch (err) {

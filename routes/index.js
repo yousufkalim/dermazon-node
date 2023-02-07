@@ -14,6 +14,7 @@ router.use('/auth', require('./auth')); // All the auth routes
 router.use('/products', require('./products'));
 router.use('/contactus', require('./contactus'));
 router.use('/news', checkAuth, checkAdminAuth, require('./news'));
+router.use('/comments', require('./comments'));
 
 // Export
 
