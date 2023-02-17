@@ -73,13 +73,15 @@ exports.contactUs = (name, company, phone, email, request, message, attachment) 
           <li>Message : ${message}</li>
         </ul>
       </div>`,
-      attachments: [
+    };
+    if (attachment) {
+      mailOptions.attachments = [
         {
           filename: 'file.png',
           path: `${attachment}`, // stream this file
         },
-      ],
-    };
+      ];
+    }
     // Sending email
     transporter.sendMail(mailOptions, function (error) {
       if (error) {
