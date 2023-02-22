@@ -10,6 +10,9 @@ const productSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    frenchDescription: {
+      type: String,
+    },
     price: {
       type: String,
       required: true,
@@ -22,6 +25,9 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     technical_description: {
+      type: String,
+    },
+    frenchTechnicalDescription: {
       type: String,
     },
     brand: {
